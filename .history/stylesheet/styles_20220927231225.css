@@ -1,0 +1,102 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f5f9;
+}
+
+input[type=number] {
+    width: 10%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+#buscar-pizza:hover {
+    background-color: #a19fc0;
+}
+
+#hello {
+    color: white;
+}
+
+button {
+    height: 3em;
+    width: 10%;
+    padding: 1.5em auto;
+    /* margin: 1em auto; */
+    cursor: pointer;
+    background-color: #ccc7f2;
+    border: none;
+    border-radius: 3px;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 0.5em; */
+    transition: all 0.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+input[type=number]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.card {
+    position: relative;
+    margin: 15px auto;
+    width: 450px;
+    padding: 20px;
+    box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    border: 0;
+    .circle {
+        border-radius: 3px;
+        width: 150px;
+        height: 150px;
+        background: black;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        border-bottom-left-radius: 170px;
+    }
+    .content {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    h2 {
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+    }
+    .social {
+        margin-bottom: 5px;
+        a {
+            text-decoration: none !important;
+            color: black;
+            margin-left: 8px;
+            font-weight: 300;
+            i {
+                font-weight: 400;
+            }
+        }
+    }
+    .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        i {
+            color: red;
+        }
+        p {
+            font-weight: 300;
+        }
+    }
+}

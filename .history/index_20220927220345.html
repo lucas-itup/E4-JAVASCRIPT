@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+    <title>E1-JAVASCRIPT</title>
+</head>
+
+<body>
+    <div id="listado-pizzas" style="text-align: center;">
+        <div>
+            <h1>Elige tu pizza favorita ingresando el codigo.</h1>
+            <div class="card">
+                <img src="img_avatar.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h2>Nombre de la pizza: <span id="nombre-pizza"> </span></h2>
+                    <h4>Precio: <span id="precio-pizza"></span></h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <input type="number" value="" id="value-id">
+            <p id="input-vacio"> </p>
+            <button onclick="buscarPizza()" type="button">Buscar</button>
+        </div>
+    </div>
+    <script src="/assets/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+    <title>E1-JAVASCRIPT</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8ee3dd930.js"></script>
+</head>
+
+<body>
+    <div id="listado-pizzas" style="text-align: center;">
+        <div>
+            <div class="card">
+                <h3>Elige tu pizza favorita ingresando el codigo.</h3>
+                <img id="img-pizza" src="" alt="Avatar" style="width:30%">
+                <div class="container">
+                    <p>Nombre de la pizza: <span class="texts" id="nombre-pizza"> </span></p>
+                    <p>Precio: <span class="texts" id="precio-pizza"></span></p>
+                    <p>Ingredientes: <span class="texts" id="ingredientes-pizza"></span>.</p>
+                </div>
+            </div>
+        </div>
+        <div id="container-search">
+            <input type="number" value="" id="value-id">
+            <button id="buscar-pizza" onclick="buscarPizza()" type="button">Buscar</button>
+        </div>
+        <p id="input-vacio"> </p>
+    </div>
+
+    <script src="/assets/index.js"></script>
+</body>
+
+</html>

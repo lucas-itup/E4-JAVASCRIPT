@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+    <title>E1-JAVASCRIPT</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8ee3dd930.js"></script>
+</head>
+
+<body>
+    <div id="listado-pizzas" style="text-align: center;">
+        <div>
+            <h1>Elige tu pizza favorita ingresando el codigo.</h1>
+            <div class="card">
+                <img src="img_avatar.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h2>Nombre de la pizza: <span id="nombre-pizza"> </span></h2>
+                    <h4>Precio: <span id="precio-pizza"></span></h4>
+                </div>
+            </div>
+        </div>
+        <div>
+            <input type="number" value="" id="value-id">
+            <p id="input-vacio"> </p>
+            <button onclick="buscarPizza()" type="button">Buscar</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="title">
+                <h1>Umur Köse</h1>
+                <h2>"Frontend Developer"</h2>
+            </div>
+            <div class="content">
+                <div class="social">
+                    <i class="fab fa-codepen"></i>
+                    <a href="https://codepen.io/umurkose/" target="_blank">
+          codepen.io/umurkose</a>
+                </div>
+
+                <div class="social">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/bada55-umurkose" target="_blank">
+        linkedin.com/in/umurkose</a>
+                </div>
+
+                <div class="social">
+                    <i class="fas fa-globe-europe"></i>
+                    <a href="https://umurkose.com" target="_blank">
+        umurkose.com</a>
+                </div>
+            </div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <script src="/assets/index.js"></script>
+</body>
+
+</html>
