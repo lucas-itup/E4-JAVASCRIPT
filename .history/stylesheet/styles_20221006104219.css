@@ -57,18 +57,10 @@ input[type=number]:focus {
 .card {
     position: relative;
     margin: 15px auto;
-    width: 270px;
-    padding: 15px;
-    box-shadow: 5px 2px 19px rgb(0 0 0 / 20%);
-    border-radius: 16px;
-    border: 2px solid white;
-    background-color: #d1d1d1;
-}
-
-h3 {
-    color: white;
-}
-
-#input-vacio {
-    color: white;
+    width: 450px;
+    padding: 20px;
+    box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    border: 0;
+    background-color: #949191;
 }

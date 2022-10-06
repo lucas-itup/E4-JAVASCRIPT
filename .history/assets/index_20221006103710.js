@@ -37,7 +37,7 @@
     const renderCard = (data) => {
         inputVacio.textContent = "";
         html = `<div class="card">
-        <img id="img-pokemon" src="${data.sprites.other.home.front_default}" alt="Avatar" style="width:200px">
+        <img id="img-pokemon" src="${data.sprites.other.home.front_default}" alt="Avatar" style="width:30%">
         <div class="container">
             <p>Nombre: <span class="texts" id="nombre-pokemon">${data.name.toUpperCase()}.</span></p>
             <p>Tipos: <span class="texts" id="tipo-pokemon">${data.types
@@ -45,7 +45,7 @@
                     return types.type.name.toUpperCase()
                 })
                 .join(", ")}.</span></p>
-            <p>Altura: <span class="texts" id="altura-pokemon">${data.height / 10 + "Mts"}.</span></p>
+            <p>Altura: <span class="texts" id="altura-pokemon">${data.height / 10 + "Mts"}s.</span></p>
             <p>Peso: <span class="texts" id="peso-pokemon">${data.weight / 10 + "Kg"}s.</span></p>
         </div>`
 

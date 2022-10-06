@@ -65,10 +65,6 @@ input[type=number]:focus {
     background-color: #d1d1d1;
 }
 
-h3 {
-    color: white;
-}
-
-#input-vacio {
+h3 #input-vacio {
     color: white;
 }
