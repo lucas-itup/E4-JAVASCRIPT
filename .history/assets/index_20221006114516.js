@@ -18,14 +18,14 @@
 
     const buscarPokemon = async() => {
         let valueid = document.getElementById('value-id').value;
-        loadSpinner();
         data = await getPokemon(valueid)
         if (valueid == "") {
             cardEmpty()
             return inputVacio.textContent = "Debes ingresar un valor numerico."
         }
         if (data == undefined) return inputVacio.textContent = "Debes ingresar un valor valido.";
-
+        loadSpinner();
+        console.log(data)
 
         renderCard(data)
     }
@@ -54,9 +54,11 @@
     }
 
     const loadSpinner = () => {
-        caja.innerHTML = `
-        <div class="fa-3x">
-        <i style="color: white;" class="fas fa-spinner fa-spin"></i>
-        </div>
+        container.innerHTML = `
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
         `;
     };

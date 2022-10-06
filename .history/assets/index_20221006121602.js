@@ -56,7 +56,7 @@
     const loadSpinner = () => {
         caja.innerHTML = `
         <div class="fa-3x">
-        <i style="color: white;" class="fas fa-spinner fa-spin"></i>
+        <i class="fas fa-spinner fa-spin"></i>
         </div>
         `;
     };
