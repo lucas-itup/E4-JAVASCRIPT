@@ -19,34 +19,35 @@
     const buscarPokemon = async() => {
         let valueid = document.getElementById('value-id').value;
         data = await getPokemon(valueid)
-        if (valueid == "") {
-            cardEmpty()
-            return inputVacio.textContent = "Debes ingresar un valor numerico."
-        }
+        imgPokemon.setAttribute('src', '/img/descarga.jpg');
+        if (valueid == "") return inputVacio.textContent = "Debes ingresar un valor numerico."
         if (data == undefined) return inputVacio.textContent = "Debes ingresar un valor valido.";
 
+        cleanFields();
         renderCard(data)
-    }
+            /*nombrePokemon.textContent = data.name.toUpperCase();
 
-    const cardEmpty = (data) => {
-        caja.innerHTML = "";
-    }
-
-    const renderCard = (data) => {
-        inputVacio.textContent = "";
-        html = `<div class="card">
-        <img id="img-pokemon" src="${data.sprites.front_default}" alt="Avatar" style="width:30%">
-        <div class="container">
-            <p>Nombre: <span class="texts" id="nombre-pokemon">${data.name.toUpperCase()}.</span></p>
-            <p>Tipos: <span class="texts" id="tipo-pokemon">${data.types
+            tipoPokemon.textContent = data.types
                 .map((types) => {
                     return types.type.name.toUpperCase()
                 })
-                .join(", ")}.</span></p>
-            <p>Altura: <span class="texts" id="altura-pokemon">${data.height / 10 + "Mts"}s.</span>.</p>
-            <p>Peso: <span class="texts" id="peso-pokemon">${data.weight / 10 + "Kg"}s.</span>.</p>
-        </div>`
+                .join(", ");
+            alturaPokemon.textContent = data.height / 10 + "Mts";
+            pesoPokemon.textContent = data.weight / 10 + "Kg";
+            imgPokemon.setAttribute('src', data.sprites.front_default);*/
+    }
 
-        caja.innerHTML = html;
+    const cleanFields = () => {
+        inputVacio.textContent = "";
+        nombrePokemon.textContent = "";
+        alturaPokemon.textContent = "";
+        imgPokemon.textContent;
+    }
 
+
+    const renderCard = () => {
+        inputVacio.textContent = "";
+        nombrePokemon.textContent = "";
+        alturaPokemon.textContent = "";
+        imgPokemon.textContent;
     }

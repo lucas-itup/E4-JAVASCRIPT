@@ -24,7 +24,6 @@
             return inputVacio.textContent = "Debes ingresar un valor numerico."
         }
         if (data == undefined) return inputVacio.textContent = "Debes ingresar un valor valido.";
-
         renderCard(data)
     }
 
@@ -33,7 +32,6 @@
     }
 
     const renderCard = (data) => {
-        inputVacio.textContent = "";
         html = `<div class="card">
         <img id="img-pokemon" src="${data.sprites.front_default}" alt="Avatar" style="width:30%">
         <div class="container">

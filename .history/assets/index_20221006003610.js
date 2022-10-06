@@ -19,21 +19,27 @@
     const buscarPokemon = async() => {
         let valueid = document.getElementById('value-id').value;
         data = await getPokemon(valueid)
-        if (valueid == "") {
-            cardEmpty()
-            return inputVacio.textContent = "Debes ingresar un valor numerico."
-        }
+        if (valueid == "") return inputVacio.textContent = "Debes ingresar un valor numerico."
         if (data == undefined) return inputVacio.textContent = "Debes ingresar un valor valido.";
 
+
         renderCard(data)
+            /*nombrePokemon.textContent = data.name.toUpperCase();
+
+            tipoPokemon.textContent = data.types
+                .map((types) => {
+                    return types.type.name.toUpperCase()
+                })
+                .join(", ");
+            alturaPokemon.textContent = data.height / 10 + "Mts";
+            pesoPokemon.textContent = data.weight / 10 + "Kg";
+            imgPokemon.setAttribute('src', data.sprites.front_default);*/
     }
 
-    const cardEmpty = (data) => {
-        caja.innerHTML = "";
-    }
+
+
 
     const renderCard = (data) => {
-        inputVacio.textContent = "";
         html = `<div class="card">
         <img id="img-pokemon" src="${data.sprites.front_default}" alt="Avatar" style="width:30%">
         <div class="container">

@@ -19,21 +19,33 @@
     const buscarPokemon = async() => {
         let valueid = document.getElementById('value-id').value;
         data = await getPokemon(valueid)
-        if (valueid == "") {
-            cardEmpty()
-            return inputVacio.textContent = "Debes ingresar un valor numerico."
-        }
+        imgPokemon.setAttribute('src', '/img/descarga.jpg');
+        if (valueid == "") return inputVacio.textContent = "Debes ingresar un valor numerico."
         if (data == undefined) return inputVacio.textContent = "Debes ingresar un valor valido.";
 
+        cleanFields();
         renderCard(data)
+            /*nombrePokemon.textContent = data.name.toUpperCase();
+
+            tipoPokemon.textContent = data.types
+                .map((types) => {
+                    return types.type.name.toUpperCase()
+                })
+                .join(", ");
+            alturaPokemon.textContent = data.height / 10 + "Mts";
+            pesoPokemon.textContent = data.weight / 10 + "Kg";
+            imgPokemon.setAttribute('src', data.sprites.front_default);*/
     }
 
-    const cardEmpty = (data) => {
-        caja.innerHTML = "";
+    const cleanFields = () => {
+        inputVacio.textContent = "";
+        nombrePokemon.textContent = "";
+        alturaPokemon.textContent = "";
+        imgPokemon.textContent;
     }
+
 
     const renderCard = (data) => {
-        inputVacio.textContent = "";
         html = `<div class="card">
         <img id="img-pokemon" src="${data.sprites.front_default}" alt="Avatar" style="width:30%">
         <div class="container">
@@ -47,6 +59,5 @@
             <p>Peso: <span class="texts" id="peso-pokemon">${data.weight / 10 + "Kg"}s.</span>.</p>
         </div>`
 
-        caja.innerHTML = html;
 
     }
