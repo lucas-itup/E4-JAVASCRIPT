@@ -10,11 +10,13 @@
         const data = await fetch(baseURL + pokemon)
             .then(
                 (res) => res.json()
-            ).catch(
-                (error) => console.log(error)
-            );
+            ).catch(function(error) {
+                inputVacio.textContent = "Debes ingresar un valor validoooo.";
+                return
+            });
         return data
     }
+
 
     const buscarPokemon = async() => {
         let valueid = document.getElementById('value-id').value;
@@ -37,7 +39,7 @@
     const renderCard = (data) => {
         inputVacio.textContent = "";
         html = `<div class="card">
-        <img id="img-pokemon" src="${data.sprites.other.home.front_default}" alt="Avatar" style="width:200%">
+        <img id="img-pokemon" src="${data.sprites.other.home.front_default}" alt="Avatar" style="width:200">
         <div class="container">
             <p>Nombre: <span class="texts" id="nombre-pokemon">${data.name.toUpperCase()}.</span></p>
             <p>Tipos: <span class="texts" id="tipo-pokemon">${data.types
