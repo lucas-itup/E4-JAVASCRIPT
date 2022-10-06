@@ -26,14 +26,10 @@
         if (data == undefined) return inputVacio.textContent = "Debes ingresar un valor valido.";
 
         cleanFields();
-        //console.log(data)
-        nombrePokemon.textContent = data.name.toUpperCase();
+        console.log(data)
+        nombrePokemon.textContent = data.name;
         // tipoPokemon.textContent = data.types[0].type.name;
-        tipoPokemon.textContent = data.types // mapeamos la lista de pokemones
-            .map((types) => {
-                return types.type.name.toUpperCase() // renderizamos cada pokemon
-            })
-            .join(", "); // unimos los elementos del array en un string
+        tipoPokemon.textContent = data.types;
         alturaPokemon.textContent = data.height / 10 + "Mts";
         pesoPokemon.textContent = data.weight / 10 + "Kg";
         imgPokemon.setAttribute('src', data.sprites.front_default);

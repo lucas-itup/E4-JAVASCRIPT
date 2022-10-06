@@ -7,33 +7,28 @@
     const baseURL = "https://pokeapi.co/api/v2/pokemon/";
 
     const getPokemon = async(pokemon) => {
-        const data = await fetch(baseURL + pokemon)
-            .then(
+        try {
+            const data = await fetch(baseURL + pokemon).then(
                 (res) => res.json()
-            ).catch(
-                (error) => console.log(error)
             ); // llamamos a la api
-        return data
+
+            return data;
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 
 
 
     const buscarPokemon = async() => {
         let valueid = document.getElementById('value-id').value;
-        data = await getPokemon(valueid)
-        imgPokemon.setAttribute('src', '/img/descarga (4).jpg');
         if (valueid == "") return inputVacio.textContent = "Debes ingresar un valor numerico."
-        if (data == undefined) return inputVacio.textContent = "Debes ingresar un valor valido.";
-
+        data = await getPokemon(valueid);
         cleanFields();
-        //console.log(data)
-        nombrePokemon.textContent = data.name.toUpperCase();
-        // tipoPokemon.textContent = data.types[0].type.name;
-        tipoPokemon.textContent = data.types // mapeamos la lista de pokemones
-            .map((types) => {
-                return types.type.name.toUpperCase() // renderizamos cada pokemon
-            })
-            .join(", "); // unimos los elementos del array en un string
+        console.log(data)
+        nombrePokemon.textContent = data.name;
+        tipoPokemon.textContent = data.types[0].type.name;
         alturaPokemon.textContent = data.height / 10 + "Mts";
         pesoPokemon.textContent = data.weight / 10 + "Kg";
         imgPokemon.setAttribute('src', data.sprites.front_default);
@@ -46,4 +41,5 @@
         nombrePokemon.textContent = "";
         alturaPokemon.textContent = "";
         imgPokemon.textContent;
+        imgPokemon.setAttribute('src', '/img/descarga (4).jpg');
     }
