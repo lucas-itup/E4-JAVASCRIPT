@@ -19,7 +19,7 @@
     const buscarPokemon = async() => {
         let valueid = document.getElementById('value-id').value;
         data = await getPokemon(valueid)
-        imgPokemon.setAttribute('src', '/img/descarga.jpg');
+        imgPokemon.setAttribute('src', '/img/descarga (4).jpg');
         if (valueid == "") return inputVacio.textContent = "Debes ingresar un valor numerico."
         if (data == undefined) return inputVacio.textContent = "Debes ingresar un valor valido.";
 
